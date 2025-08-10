@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteio de Limpeza - Final de Semana</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Quem vai ficar na casa no final de semana?</h1>
+        </header>
+
+        <main>
+            <div class="input-section" id="inputSection">
+                <h2>Adicione os nomes das pessoas:</h2>
+                
+                <div class="names-container" id="namesContainer">
+                    <div class="name-input-group">
+                        <input type="text" class="name-input" placeholder="Digite o nome da pessoa" required>
+                        <button type="button" class="remove-btn" onclick="removeName(this)" style="display: none;">×</button>
+                    </div>
+                </div>
+
+                <div class="buttons-container">
+                    <button type="button" class="add-btn" onclick="addNameField()">+ Adicionar pessoa</button>
+                    <button type="button" class="complete-btn" onclick="realizarSorteio()">Concluir!</button>
+                </div>
+            </div>
+
+            <div class="results-section" id="resultsSection" style="display: none;">
+                <h2>Resultado do Sorteio</h2>
+                
+                <div class="day-results">
+                    <div class="day-column">
+                        <h3>Sábado</h3>
+                        <div class="tasks-list">
+                            <div class="task-item">
+                                <span class="task-name">Corredor Feminino:</span>
+                                <span class="person-name" id="sabado-corredor-feminino"></span>
+                            </div>
+                            <div class="task-item">
+                                <span class="task-name">Térreo:</span>
+                                <span class="person-name" id="sabado-terreo"></span>
+                            </div>
+                            <div class="task-item">
+                                <span class="task-name">Corredor Masculino:</span>
+                                <span class="person-name" id="sabado-corredor-masculino"></span>
+                            </div>
+                            <div class="task-item">
+                                <span class="task-name">Cobertura:</span>
+                                <span class="person-name" id="sabado-cobertura"></span>
+                            </div>
+                            <div class="task-item">
+                                <span class="task-name">Tirar o Lixo:</span>
+                                <span class="person-name" id="sabado-lixo"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="day-column">
+                        <h3>Domingo</h3>
+                        <div class="tasks-list">
+                            <div class="task-item">
+                                <span class="task-name">Corredor Feminino:</span>
+                                <span class="person-name" id="domingo-corredor-feminino"></span>
+                            </div>
+                            <div class="task-item">
+                                <span class="task-name">Térreo:</span>
+                                <span class="person-name" id="domingo-terreo"></span>
+                            </div>
+                            <div class="task-item">
+                                <span class="task-name">Corredor Masculino:</span>
+                                <span class="person-name" id="domingo-corredor-masculino"></span>
+                            </div>
+                            <div class="task-item">
+                                <span class="task-name">Cobertura:</span>
+                                <span class="person-name" id="domingo-cobertura"></span>
+                            </div>
+                            <div class="task-item">
+                                <span class="task-name">Tirar o Lixo:</span>
+                                <span class="person-name" id="domingo-lixo"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="buttons-container">
+                    <button type="button" class="reset-btn" onclick="resetarSorteio()">Novo Sorteio</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
